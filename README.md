@@ -31,6 +31,8 @@
 
 - [📌 About](#-about)
 - [✨ Features](#-features)
+- [🖥️ GUI Preview](#️-gui-preview)
+- [📸 Screenshots](#-screenshots)
 - [🏗️ Model Architecture](#️-model-architecture)
 - [📊 Training Results](#-training-results)
 - [🗂️ Project Structure](#️-project-structure)
@@ -39,7 +41,6 @@
   - [⭐ Option A — Kaggle (Recommended)](#-option-a--kaggle-recommended)
   - [🖥️ Option B — Own Machine (Local)](#️-option-b--own-machine-local)
 - [📦 Dependencies & Libraries](#-dependencies--libraries)
-- [🖥️ GUI Preview](#️-gui-preview)
 - [🧪 Topics Covered](#-topics-covered)
 - [👤 Author](#-author)
 - [📄 License](#-license)
@@ -66,13 +67,77 @@ It features a fully interactive dark-theme web GUI where you can:
 | ⚡ | **Smart Loader** | Trains once, saves permanently — loads in 3 seconds after |
 | 📂 | **Image Upload** | Supports PNG, JPG, BMP — drag & drop or click to browse |
 | ✏️ | **Draw Canvas** | Freehand digit drawing with mouse or touch input |
+| ⚡ | **Auto Predict** | Predicts automatically as soon as you lift your pen |
 | 📊 | **Confidence Bar** | Visual gradient bar showing prediction certainty |
 | 🔢 | **All 10 Probabilities** | Individual probability bar for every digit 0–9 |
 | 📋 | **Prediction History** | Last 8 predictions with source icon and timestamp |
 | 💾 | **Save Drawing** | Export canvas sketch as PNG file |
 | 🎨 | **Dark Theme UI** | Professional dark interface with custom CSS |
 | 🌐 | **Public Link** | Gradio auto-generates a shareable public URL |
-| 🔒 | **Light Theme Fix** | Forced dark theme — fully visible in any browser setting |
+
+---
+
+## 🖥️ GUI Preview
+
+### 🏠 Main Interface — Upload & Draw
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <b>📂 Upload Mode · ✏️ Draw Mode</b><br/><br/>
+      <img src="screenshots/gui_main.png" width="100%" />
+    </td>
+    <td align="center" width="50%">
+      <b>📊 Results · 📋 Prediction History</b><br/><br/>
+      <img src="screenshots/gui_results.png" width="100%" />
+    </td>
+  </tr>
+</table>
+
+> 🎯 **Left:** Upload a digit image (green 5 recognized at 65.74%) + Draw canvas with digit 2
+> 📊 **Right:** Full probability breakdown for all digits + prediction history with timestamps
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Overview
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <b>🖥️ Home Page</b><br/><br/>
+      <img src="screenshots/gui_main.png" width="100%" />
+    </td>
+    <td align="center" width="50%">
+      <b>📊 Results & History</b><br/><br/>
+      <img src="screenshots/gui_results.png" width="100%" />
+    </td>
+  </tr>
+</table>
+
+---
+
+### ⚡ Predictions in Action
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <b>✏️ Predict 5 (Upload)</b><br/><br/>
+      <img src="screenshots/gui_main.png" width="100%" />
+    </td>
+    <td align="center" width="33%">
+      <b>✏️ Predict 2 (Draw)</b><br/><br/>
+      <img src="screenshots/gui_results.png" width="100%" />
+    </td>
+    <td align="center" width="33%">
+      <b>📋 History Panel</b><br/><br/>
+      <img src="screenshots/gui_results.png" width="100%" />
+    </td>
+  </tr>
+</table>
+
+> 💡 **Add more screenshots** by saving to `screenshots/` folder and adding `<img>` tags above!
 
 ---
 
@@ -144,19 +209,12 @@ Output: Predicted Digit (0–9) + Confidence %
 ```
 📁 Handwritten-Digit-Recognition/
 │
-├── 📓 kaggle_training.ipynb ← STEP 1: Train & save the model (run once!)
-├── 📓 kaggle_gui.ipynb      ← STEP 2: Launch interactive GUI (run anytime!)
-├── 📄 requirements.txt      ← All Python dependencies
-├── 📄 README.md             ← You are here
-├── 📄 LICENSE               ← MIT License
+├── 📁 src/                          ← All source code lives here
+│   └── 📓 training.ipynb            ← ONE notebook: Train model + Launch GUI
+│                                      • Cells 1–11  : Train & save model (once!)
+│                                      • Cells 12–18 : Launch interactive GUI
 │
-├── 🧠 digit_model.keras     ← Saved trained model (generated after training)
-│                               ⚠️ Not in repo — saved to Kaggle Dataset
-│                               📍 Location: /kaggle/working/digit_model.keras
-│                               💾 Save as Dataset: "mnist-digit-model"
-│                               📥 Loaded from: /kaggle/input/mnist-digit-model/
-│
-├── 📁 images/               ← Sample test images for the GUI
+├── 📁 images/                       ← Sample test images for the GUI
 │   ├── 🖼️ 0.jpeg
 │   ├── 🖼️ 1.jpeg  1(1).jpeg
 │   ├── 🖼️ 2.jpeg
@@ -168,10 +226,22 @@ Output: Predicted Digit (0–9) + Confidence %
 │   ├── 🖼️ 8.jpeg
 │   └── 🖼️ 9.jpeg  9(1).jpeg
 │
-└── 📁 screenshots/          ← GUI screenshots
-    └── (GUI screenshot)
-
+├── 📁 screenshots/                  ← GUI screenshots
+│   ├── 🖼️ gui_main.png              ← Main interface (upload + draw)
+│   └── 🖼️ gui_results.png           ← Results + prediction history
+│
+├── 🧠 digit_recognition_model.h5   ← Saved trained model (auto-generated)
+│                                      ⚠️ Not in repo — lives on Kaggle
+│                                      📍 /kaggle/working/digit_recognition_model.h5
+│                                      💾 Save as Dataset: "mnist-digit-model"
+│                                      📥 Loaded from: /kaggle/input/mnist-digit-model/
+│
+├── 📄 requirements.txt              ← Python dependencies
+├── 📄 .gitignore                    ← Git ignore rules
+├── 📄 LICENSE                       ← MIT License
+└── 📄 README.md                     ← You are here
 ```
+
 ---
 
 ## 🖼️ Sample Test Images
@@ -185,7 +255,7 @@ The `images/` folder contains **16 real handwritten digit samples** to test the 
 | 3️⃣ | Select any `.jpeg` from the `images/` folder |
 | 4️⃣ | See the predicted digit + full confidence breakdown! |
 
-> 💡 **Tip:** Multiple versions of some digits (e.g. `4.jpeg`, `4(1).jpeg`, `4(2).jpeg`) let you test how the model handles **different handwriting styles** for the same digit!
+> 💡 Multiple versions of digits (e.g. `4.jpeg`, `4(1).jpeg`, `4(2).jpeg`) let you test different handwriting styles!
 
 ---
 
@@ -193,32 +263,37 @@ The `images/` folder contains **16 real handwritten digit samples** to test the 
 
 ### ⭐ Option A — Kaggle *(Recommended)*
 
-> ✅ **Best option** — Free GPU, no installation needed, works in browser, generates a public shareable link!
+> ✅ **Best option** — Free GPU, no installation, works in browser, generates public shareable link!
 
-**🔹 Step 1 — Train the model** *(only once!)*
+> ✅ **Everything is in ONE notebook** — `src/training.ipynb`
+> Train the model in the top half, launch the GUI in the bottom half!
+
+**🔹 First Time — Train + Launch GUI**
 
 1. Go to [kaggle.com](https://www.kaggle.com) → **Create** → **New Notebook**
-2. Rename it: `digit-recognition-training`
-3. Settings → **Internet: ON** ✅ | Settings → **Accelerator: GPU T4** ✅
-4. Paste entire `kaggle_training.py` code → **Run All**
-5. Wait ~17 minutes for training to complete
-6. **Output panel** (right side) → find `digit_model.keras`
-7. Click `⋮` → **"Save as Kaggle Dataset"** → name it: `mnist-digit-model` → **Save**
+2. Settings → **Internet: ON** ✅ | **Accelerator: GPU T4** ✅
+3. Click `File` → **Import Notebook** → upload `src/training.ipynb`
+4. **Run All Cells** (Cells 1–18)
+5. Training takes ~17 min → then GUI launches automatically!
+6. **Output panel** → find `digit_recognition_model.h5`
+7. Click `⋮` → **"Save as Kaggle Dataset"** → name: `mnist-digit-model` → **Save** ✅
 
 ```
-⏳ Training...  (~17 minutes on Kaggle GPU T4)
+⏳ Cells 1–11  : Training... (~17 minutes on GPU T4)
 ✅ Test Accuracy : 99.43%
-✅ Model saved  → digit_model.keras
-📢 Save it as a Dataset now! (only do this once)
+✅ Model saved  → digit_recognition_model.h5
+📢 Save as Dataset: mnist-digit-model  (do once!)
+
+⚡ Cells 12–18 : GUI launching...
+🚀 Public URL  : https://xxxxx.gradio.live  ← click this!
 ```
 
-**🔹 Step 2 — Launch the GUI** *(every time!)*
+**🔹 Every Time After — Skip Training, Just Launch GUI**
 
-1. Create **new notebook**: `digit-recognition-gui`
-2. Settings → **Internet: ON** ✅
-3. Right panel → **Add Data** → search `mnist-digit-model` → **Add** ✅
-4. Paste entire `kaggle_gui.py` code → **Run All**
-5. Public link appears in output → click it → **GUI opens!** 🎉
+1. Open the same notebook
+2. Right panel → **Add Data** → search `mnist-digit-model` → **Add** ✅
+3. Run only **Cells 12–18** (skip training cells!)
+4. Click the public URL → **GUI opens in 3 seconds!** 🎉
 
 ```
 ⚡ Model loaded in 3 seconds — no retraining!
@@ -229,12 +304,7 @@ The `images/` folder contains **16 real handwritten digit samples** to test the 
 
 ### 🖥️ Option B — Own Machine *(Local)*
 
-> ℹ️ For running on your own laptop or PC. Requires Python to be installed.
-
-**Requirements:**
-- Python 3.8 or higher → [Download Python](https://www.python.org/downloads/)
-- pip (comes with Python)
-- At least 4GB RAM
+> ℹ️ Requires Python installed on your laptop/PC.
 
 **🔹 Step 1 — Clone the repo**
 ```bash
@@ -242,14 +312,12 @@ git clone https://github.com/Khansa972/Handwritten-Digit-Recognition.git
 cd Handwritten-Digit-Recognition
 ```
 
-**🔹 Step 2 — Download & Install all libraries**
-
-First, make sure you have the `requirements.txt` file from this repo, then run:
+**🔹 Step 2 — Install all libraries**
 ```bash
 pip install -r requirements.txt
 ```
 
-Or install each library manually one by one:
+Or install manually:
 ```bash
 pip install tensorflow>=2.10.0
 pip install numpy>=1.21.0
@@ -261,23 +329,20 @@ pip install seaborn>=0.11.0
 pip install scikit-learn>=1.0.0
 ```
 
-**🔹 Step 3 — Train the model** *(only once)*
+**🔹 Step 3 — Open notebook in Jupyter**
 ```bash
-python kaggle_training.py
+pip install jupyter
+jupyter notebook
 ```
-> ⚠️ Training on CPU is slower (~30–60 min). For fast training use **Option A (Kaggle GPU)**.
+> Open `src/training.ipynb` → Run **Cells 1–11** to train (once)
+> Then run **Cells 12–18** to launch GUI → visit `http://127.0.0.1:7860`
 
-**🔹 Step 4 — Launch the GUI**
-```bash
-python kaggle_gui.py
-```
-> Open browser → go to: `http://127.0.0.1:7860`
+> ⚠️ Training on CPU is slower (~30–60 min). Use **Option A (Kaggle GPU)** for fast training!
 
 ---
 
 ## 📦 Dependencies & Libraries
 
-Install everything at once:
 ```bash
 pip install -r requirements.txt
 ```
@@ -292,39 +357,6 @@ pip install -r requirements.txt
 | ![Matplotlib](https://img.shields.io/badge/matplotlib-≥3.5-11557c?style=flat-square) | ≥ 3.5 | Training accuracy & loss plots |
 | ![Sklearn](https://img.shields.io/badge/scikit--learn-≥1.0-F7931E?style=flat-square&logo=scikit-learn) | ≥ 1.0 | Confusion matrix & classification report |
 | ![Seaborn](https://img.shields.io/badge/seaborn-≥0.11-4CBBDB?style=flat-square) | ≥ 0.11 | Beautiful heatmap visualization |
-
----
-
-## 🖥️ GUI Preview
-
-```
-╔══════════════════════════════════════════════════════════════╗
-║  ✍️  Handwritten Digit Recognition                          ║
-║  CNN Model trained on MNIST Dataset — by Khansa Bint-e-Zia  ║
-║  [Python]  [TensorFlow]  [CNN]  [MNIST]  [AI Project]       ║
-╠══════════════════════╦═══════════════════════════════════════╣
-║  📂 UPLOAD IMAGE     ║  ✏️ DRAW A DIGIT                     ║
-║  ┌──────────────┐    ║  ┌─────────────────────────────────┐ ║
-║  │  Drop image  │    ║  │                                 │ ║
-║  │  or browse   │    ║  │   Draw your digit here...       │ ║
-║  └──────────────┘    ║  │                                 │ ║
-║  [🔍 Predict]        ║  └─────────────────────────────────┘ ║
-║                      ║  [🔍 Predict] [🗑️ Clear] [💾 Save]  ║
-║  ┌─ Result ────────┐ ║  ┌─ Result ──────────────────────┐  ║
-║  │  7   RECOGNIZED │ ║  │  3   PREDICTED DIGIT          │  ║
-║  │      99.12%     │ ║  │      97.45%                   │  ║
-║  │  ▓▓▓▓▓▓▓▓▓▓░ 99%│ ║  │  ▓▓▓▓▓▓▓▓▓░░ 97%             │  ║
-║  │  ALL DIGIT PROBS│ ║  │  ALL DIGIT PROBS              │  ║
-║  │  0 ░ 0.1%       │ ║  │  3 █ 97.4%                   │  ║
-║  │  7 █ 99.1%      │ ║  └───────────────────────────────┘  ║
-║  └─────────────────┘ ║                                      ║
-╠══════════════════════╩═══════════════════════════════════════╣
-║  📋 PREDICTION HISTORY                                      ║
-║  [7 📂 99.1%] [3 ✏️ 97.4%] [5 ✏️ 92.5%] [1 📂 99.9%]      ║
-╠══════════════════════════════════════════════════════════════╣
-║  © 2024 Handwritten Digit Recognition · Khansa Bint-e-Zia   ║
-╚══════════════════════════════════════════════════════════════╝
-```
 
 ---
 
