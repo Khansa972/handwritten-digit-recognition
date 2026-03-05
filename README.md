@@ -206,8 +206,8 @@ Output: Predicted Digit (0–9) + Confidence %
 │
 ├── 📁 src/                          ← All source code lives here
 │   └── 📓 training.ipynb            ← ONE notebook: Train model + Launch GUI
-│   └── 📓 training.ipynb            • Cells 1–11  : Train & save model (once!)
-│                                      • Cells 12: Launch interactive GUI
+│   └── 📓 gui.ipynb                 • Cells 1–11  : Train & save model (once!)
+│                                    • Cell 12: Launch interactive GUI
 │
 ├── 📁 images/                       ← Sample test images for the GUI
 │   ├── 🖼️ 0.jpeg
@@ -279,7 +279,7 @@ The `images/` folder contains **16 real handwritten digit samples** to test the 
 ✅ Model saved  → digit_recognition_model.h5
 📢 Save as Dataset: mnist-digit-model  (do once!)
 
-⚡ Cells 12 : GUI launching...
+⚡ Cell 12 : GUI launching...
 🚀 Public URL  : https://xxxxx.gradio.live  ← click this!
 ```
 
