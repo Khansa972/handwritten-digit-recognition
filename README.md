@@ -1,15 +1,6 @@
 <div align="center">
 
-```
-╔══════════════════════════════════════════════════════════╗
-║                                                          ║
-║    ✍️   H A N D W R I T T E N   D I G I T               ║
-║         R E C O G N I T I O N                           ║
-║                                                          ║
-║    CNN · MNIST · TensorFlow · Gradio · Python            ║
-║                                                          ║
-╚══════════════════════════════════════════════════════════╝
-```
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a3a5c,100:4cc9f0&height=200&section=header&text=Handwritten%20Digit%20Recognition&fontSize=38&fontColor=ffffff&fontAlignY=38&desc=CNN%20%C2%B7%20MNIST%20%C2%B7%20TensorFlow%20%C2%B7%20Gradio%20%C2%B7%20Python&descAlignY=58&descSize=16&animation=fadeIn" />
 
 <p>
   <img src="https://img.shields.io/badge/Type-AI%20Project-ef4444?style=for-the-badge&logo=openai&logoColor=white" />
@@ -88,35 +79,77 @@ It features a fully interactive dark-theme web GUI where you can:
 
 ## 📸 Screenshots
 
-> 📷 **Add your screenshots here after running the GUI!**
-> Take a screenshot while the GUI is open, save to a `screenshots/` folder, push to GitHub, then replace the comments below with real image tags.
+> 📷 **Take screenshots while the GUI is running, save them to a `screenshots/` folder in your repo, then replace the placeholder lines below with your real images!**
 
-### 🖥️ Main Interface
-<!-- ![Main Interface](screenshots/gui_main.png) -->
-```
-📁 screenshots/gui_main.png     ← Full GUI screenshot (add yours here!)
-```
+---
 
-### ✏️ Drawing Prediction
-<!-- ![Drawing Prediction](screenshots/draw_predict.png) -->
-```
-📁 screenshots/draw_predict.png ← Canvas drawing with result (add yours here!)
-```
+### 🏠 Overview
 
-### 📂 Upload Prediction
-<!-- ![Upload Prediction](screenshots/upload_predict.png) -->
-```
-📁 screenshots/upload_predict.png ← Uploaded image with result (add yours here!)
-```
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <b>🖥️ Home Page</b><br/><br/>
+      <!-- Replace with your screenshot: -->
+      <!-- <img src="screenshots/home.png" width="100%" /> -->
+      <img src="https://placehold.co/420x260/0d1117/4cc9f0?text=Home+Page+Screenshot%0AAdd+yours+here!" width="100%" />
+    </td>
+    <td align="center" width="50%">
+      <b>📂 Upload Mode</b><br/><br/>
+      <!-- Replace with your screenshot: -->
+      <!-- <img src="screenshots/upload.png" width="100%" /> -->
+      <img src="https://placehold.co/420x260/0d1117/4ade80?text=Upload+Mode+Screenshot%0AAdd+yours+here!" width="100%" />
+    </td>
+  </tr>
+</table>
 
-### 📋 Prediction History
-<!-- ![Prediction History](screenshots/history.png) -->
-```
-📁 screenshots/history.png      ← History section (add yours here!)
-```
+---
 
-> 💡 **How to take a screenshot:**
-> `Win + Shift + S` (Windows) or `Cmd + Shift + 4` (Mac) → Save to `screenshots/` folder → Push to GitHub → Replace comment lines above with `![title](screenshots/filename.png)`
+### ⚡ Predictions in Action
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <b>✏️ Predict 2</b><br/><br/>
+      <!-- <img src="screenshots/predict_2.png" width="100%" /> -->
+      <img src="https://placehold.co/280x200/0d1117/f72585?text=Predict+2%0AAdd+screenshot!" width="100%" />
+    </td>
+    <td align="center" width="33%">
+      <b>✏️ Predict 8</b><br/><br/>
+      <!-- <img src="screenshots/predict_8.png" width="100%" /> -->
+      <img src="https://placehold.co/280x200/0d1117/fbbf24?text=Predict+8%0AAdd+screenshot!" width="100%" />
+    </td>
+    <td align="center" width="33%">
+      <b>✏️ Predict 0</b><br/><br/>
+      <!-- <img src="screenshots/predict_0.png" width="100%" /> -->
+      <img src="https://placehold.co/280x200/0d1117/4cc9f0?text=Predict+0%0AAdd+screenshot!" width="100%" />
+    </td>
+  </tr>
+</table>
+
+---
+
+### 📋 Prediction History & Results
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <b>📋 Prediction History</b><br/><br/>
+      <!-- <img src="screenshots/history.png" width="100%" /> -->
+      <img src="https://placehold.co/420x200/0d1117/a855f7?text=History+Section%0AAdd+screenshot!" width="100%" />
+    </td>
+    <td align="center" width="50%">
+      <b>📊 All Digit Probabilities</b><br/><br/>
+      <!-- <img src="screenshots/probabilities.png" width="100%" /> -->
+      <img src="https://placehold.co/420x200/0d1117/4ade80?text=Digit+Probabilities%0AAdd+screenshot!" width="100%" />
+    </td>
+  </tr>
+</table>
+
+> 💡 **How to replace placeholders with your real screenshots:**
+> 1. Run the GUI on Kaggle → take screenshots with `Win + Shift + S`
+> 2. Create a `screenshots/` folder in your repo
+> 3. Upload your `.png` files there
+> 4. In README, **uncomment** the `<img src="screenshots/...">` lines and **delete** the placeholder `<img>` lines above them
 
 ---
 
@@ -389,16 +422,12 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 <div align="center">
 
-```
-╔══════════════════════════════════════════════════════════╗
-║                                                          ║
-║   © 2024  Handwritten Digit Recognition                  ║
-║   ✍️  Khansa Bint-e-Zia  ·  github.com/Khansa972         ║
-║   Built with ❤️  using Python · TensorFlow · Kaggle      ║
-║                                                          ║
-╚══════════════════════════════════════════════════════════╝
-```
+<br/>
 
 ⭐ **If you found this project helpful, please star the repository!** ⭐
+
+<br/>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:4cc9f0,50:1a3a5c,100:0d1117&height=140&section=footer&text=%C2%A9%202024%20Khansa%20Bint-e-Zia%20%C2%B7%20github.com%2FKhansa972&fontSize=14&fontColor=ffffff&fontAlignY=65&animation=fadeIn" />
 
 </div>
