@@ -329,7 +329,7 @@ pip install jupyter
 jupyter notebook
 ```
 > Open `src/training.ipynb` → Run **Cells 1–11** to train (once)
-> Then run **Cells 12–18** to launch GUI → visit `http://127.0.0.1:7860`
+> Then run **Cell 12** to launch GUI → visit `http://127.0.0.1:7860`
 
 > ⚠️ Training on CPU is slower (~30–60 min). Use **Option A (Kaggle GPU)** for fast training!
 
