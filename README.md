@@ -140,6 +140,8 @@ Output: Predicted Digit (0–9) + Confidence %
 ---
 
 ## 🗂️ Project Structure
+
+```
 📁 Handwritten-Digit-Recognition/
 │
 ├── 📓 kaggle_training.ipynb ← STEP 1: Train & save the model (run once!)
@@ -169,6 +171,7 @@ Output: Predicted Digit (0–9) + Confidence %
 └── 📁 screenshots/          ← GUI screenshots
     └── (GUI screenshot)
 
+```
 ---
 
 ## 🖼️ Sample Test Images
