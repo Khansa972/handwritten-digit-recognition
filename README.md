@@ -123,11 +123,11 @@ It features a fully interactive dark-theme web GUI where you can:
   <tr>
     <td align="center" width="33%">
       <b>✏️ Predict 5 (Upload)</b><br/><br/>
-      <img src="screenshots/gui_main.png" width="100%" />
+      <img src="screenshots/predict_5.png" width="100%" />
     </td>
     <td align="center" width="33%">
       <b>✏️ Predict 2 (Draw)</b><br/><br/>
-      <img src="screenshots/gui_results.png" width="100%" />
+      <img src="screenshots/predict_2.png" width="100%" />
     </td>
     <td align="center" width="33%">
       <b>📋 History Panel</b><br/><br/>
