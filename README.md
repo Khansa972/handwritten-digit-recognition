@@ -84,18 +84,17 @@ It features a fully interactive dark-theme web GUI where you can:
 <table>
   <tr>
     <td align="center" width="50%">
-      <b>📂 Upload Mode · ✏️ Draw Mode</b><br/><br/>
+      <b>📂 Upload Mode 
+        ✏️ Draw Mode</b><br/><br/>
       <img src="screenshots/gui_main.png" width="100%" />
     </td>
     <td align="center" width="50%">
-      <b>📊 Results · 📋 Prediction History</b><br/><br/>
+      <b>📊 Results 
+         📋 Prediction History</b><br/><br/>
       <img src="screenshots/gui_results.png" width="100%" />
     </td>
   </tr>
 </table>
-
-> 🎯 **Left:** Upload a digit image (green 5 recognized at 65.74%) + Draw canvas with digit 2
-> 📊 **Right:** Full probability breakdown for all digits + prediction history with timestamps
 
 ---
 
@@ -136,8 +135,6 @@ It features a fully interactive dark-theme web GUI where you can:
     </td>
   </tr>
 </table>
-
-> 💡 **Add more screenshots** by saving to `screenshots/` folder and adding `<img>` tags above!
 
 ---
 
@@ -211,8 +208,8 @@ Output: Predicted Digit (0–9) + Confidence %
 │
 ├── 📁 src/                          ← All source code lives here
 │   └── 📓 training.ipynb            ← ONE notebook: Train model + Launch GUI
-│                                      • Cells 1–11  : Train & save model (once!)
-│                                      • Cells 12–18 : Launch interactive GUI
+│   └── 📓 training.ipynb            • Cells 1–11  : Train & save model (once!)
+│                                      • Cells 12: Launch interactive GUI
 │
 ├── 📁 images/                       ← Sample test images for the GUI
 │   ├── 🖼️ 0.jpeg
